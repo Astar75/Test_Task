@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Task</string>
+
+    <string name="product_search">Поиск товаров</string>
+    <string name="date_added">Дата добавления</string>
+    <string name="in_stock">На складе</string>
+    <string name="cancel">Отмена</string>
+    <string name="accept">Принять</string>
+    <string name="settings">Настройки</string>
+    <string name="quantity_of_goods">Количество товаров</string>
+    <string name="less">Меньше</string>
+    <string name="more">Больше</string>
+    <string name="no">Нет</string>
+    <string name="yes">Да</string>
+    <string name="delete_product">Удаление товара</string>
+    <string name="ask_delete_product">Вы действительно хотите удалить выбранный товар?</string>
+</resources>
