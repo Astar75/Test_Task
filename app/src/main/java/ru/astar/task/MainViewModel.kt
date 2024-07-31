@@ -20,17 +20,18 @@ class MainViewModel @Inject constructor(
 
     private val searchFlow = MutableStateFlow("")
 
-    private val products: StateFlow<List<Product>> = productsRepository.observeAll()
+    private val products: StateFlow<List<Product>> = productsRepository
+        .observeAll()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
 
-    val filteredProducts = products.combine(searchFlow) { products, searchingString ->
+    val filteredProducts = products.combine(searchFlow) { products, query ->
         products.filter { product ->
-            product.name.contains(searchingString, ignoreCase = true)
+            product.name.contains(query, ignoreCase = true)
         }
     }
 
-    fun setSearchString(searchString: String) {
-        searchFlow.value = searchString
+    fun setSearchString(query: String) {
+        searchFlow.value = query
     }
 
     fun setNumberProducts(productId: Long, quantity: Int) {

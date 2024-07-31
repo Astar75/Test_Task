@@ -14,7 +14,9 @@ interface ProductsRepository {
     suspend fun setNumberProducts(productId: Long, quantity: Int)
     suspend fun deleteProduct(productId: Long)
 
-    class Base @Inject constructor(private val dao: ProductsDao) : ProductsRepository {
+    class Base @Inject constructor(
+        private val dao: ProductsDao,
+    ) : ProductsRepository {
         override fun observeAll(): Flow<List<Product>> =
             dao.observeAll().map { it.toProductList() }
 

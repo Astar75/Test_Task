@@ -14,4 +14,7 @@
     <string name="yes">Да</string>
     <string name="delete_product">Удаление товара</string>
     <string name="ask_delete_product">Вы действительно хотите удалить выбранный товар?</string>
+    <string name="edit">Редактирование</string>
+    <string name="delete">Удаление</string>
+    <string name="product_list">Список товаров</string>
 </resources>
